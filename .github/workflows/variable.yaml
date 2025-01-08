@@ -13,7 +13,7 @@ jobs:
       Greeting: Hello
     steps: 
       - name: "Say variables"
-        run: "My name is $cloud and $Greeting"
+        run: echo "My name is $cloud and $Greeting an $First_name"
         env:
           First_name: Hitesh
   
