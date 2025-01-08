@@ -1,0 +1,20 @@
+name: Testing the env variables
+
+on:
+  workflow_dispatch
+
+env:
+  cloud: aws-cloud
+
+jobs: 
+  greeting_job:
+    runs-on: ubuntu-latest 
+    env:
+      Greeting: Hello
+    steps: 
+      - name: "Say variables"
+        run: "My name is $cloud and $Greeting"
+        env:
+          First_name: Hitesh
+  
+
