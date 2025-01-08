@@ -1,0 +1,19 @@
+name: Testing the env variables 2 
+
+on:
+  workflow_dispatch
+
+env:
+  cloud: aws-cloud
+
+jobs: 
+  greeting_job:
+    runs-on: ubuntu-latest 
+    env:
+      Greeting: Hello
+    steps: 
+      - name: "Say variables"
+        run: echo "My name is $cloud and $Greeting an $First_name and ${{ vars.PROJECT_ID }}"
+        env:
+          First_name: Hitesh
+  
